@@ -1,11 +1,11 @@
 {
   "name": "dmatrix.dev",
   "private": true,
-  "description": "my personal blog",
+  "description": "My personal blog",
   "version": "0.1.0",
   "author": "Dmitry Sebakov <dimasebakovgoo@gmail.com>",
   "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/PDmatrix/dmatrix.dev/issues"
   },
   "dependencies": {
     "gatsby": "^2.3.2",
@@ -40,15 +40,15 @@
   "devDependencies": {
     "prettier": "^1.16.4"
   },
-  "homepage": "https://github.com/gatsbyjs/gatsby-starter-blog#readme",
+  "homepage": "https://github.com/PDmatrix/dmatrix.dev#readme",
   "keywords": [
-    "gatsby"
+    "blog"
   ],
   "license": "MIT",
   "main": "n/a",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/gatsbyjs/gatsby-starter-blog.git"
+    "url": "git+https://github.com/PDmatrix/dmatrix.dev.git"
   },
   "scripts": {
     "build": "gatsby build",
