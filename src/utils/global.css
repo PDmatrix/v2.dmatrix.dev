@@ -33,3 +33,7 @@ body {
     overflow: initial;
     min-width: 100%;
 }
+
+blockquote {
+    border-left: 0.32813rem solid hsl(0, 0%, 100%);
+}
