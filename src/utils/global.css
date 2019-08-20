@@ -8,6 +8,20 @@ body {
     background-color: var(--bg);
 }
 
+body :not(pre) > code.language-text {
+    background-color: rgb(14, 30, 37);
+    color: #FFFFFF
+}
+
+.gatsby-resp-image-figcaption {
+    text-align: center;
+    font-size: 0.8rem;
+}
+
+.emoji {
+    font-family: apple color emoji,segoe ui emoji,noto color emoji,android emoji,emojisymbols,emojione mozilla,twemoji mozilla,segoe ui symbol;
+}
+
 .gatsby-highlight-code-line {
     background-color: hsla(298, 8%, 34%, 0.26);
     display: block;

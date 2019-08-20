@@ -6,6 +6,13 @@ module.exports = {
     siteUrl: `https://www.dmatrix.dev/`,
   },
   plugins: [
+     {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        path: `${__dirname}/static/images/uploads`,
+        name: 'uploads',
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -25,9 +32,13 @@ module.exports = {
       options: {
         plugins: [
           {
+            resolve: `gatsby-remark-relative-images`,
+          },
+          {
             resolve: `gatsby-remark-images`,
             options: {
-              maxWidth: 590,
+              showCaptions: true,
+              markdownCaptions: true
             },
           },
           {
@@ -47,11 +58,12 @@ module.exports = {
           },
           `gatsby-remark-copy-linked-files`,
           `gatsby-remark-smartypants`,
+          `gatsby-remark-bracketed-spans`
         ],
       },
     },
-    `gatsby-transformer-sharp`,
     `gatsby-plugin-sitemap`,
+    `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-google-analytics`,
