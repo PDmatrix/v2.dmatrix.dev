@@ -1,14 +1,14 @@
-import React from "react"
-import profilePic from '../../content/assets/profile-pic.jpg';
+import React from "react";
+import profilePic from "../../content/assets/profile-pic.jpg";
 
-import { rhythm } from "../utils/typography"
+import { rhythm } from "../utils/typography";
 
 function Bio() {
   return (
     <div
       style={{
         display: `flex`,
-        marginBottom: rhythm(2.5),
+        marginBottom: rhythm(2)
       }}
     >
       <img
@@ -19,14 +19,19 @@ function Bio() {
           marginBottom: 0,
           width: rhythm(2),
           height: rhythm(2.15),
-          borderRadius: "50%",
+          borderRadius: "50%"
         }}
       />
-      <p>
-        Written by <strong>Dmitry Sebakov</strong>
+      <p style={{ maxWidth: 290 }}>
+        Written by{" "}
+        <a href="https://github.com/PDmatrix">
+          <strong>Dmitry Sebakov</strong>
+        </a>
+        <br />
+        Sometimes I write stuff! <span className="emoji">😄</span>
       </p>
     </div>
-  )
+  );
 }
 
-export default Bio
+export default Bio;

@@ -6,59 +6,65 @@ import Layout from "../components/layout";
 import SEO from "../components/seo";
 import { rhythm } from "../utils/typography";
 
-class BlogIndex extends React.Component {
-  render() {
-    const { data } = this.props;
-    const siteTitle = data.site.siteMetadata.title;
-    const posts = data.allMarkdownRemark.edges;
-    const injectedStyles = { maxWidth: rhythm(20) };
-    return (
-      <Layout
-        injectedStyles={injectedStyles}
-        location={this.props.location}
-        title={siteTitle}
-      >
-        <SEO
-          title="All posts"
-          keywords={[`blog`, `gatsby`, `javascript`, `react`, `C#`, `advent-of-code`]}
-        />
-        <Bio />
-        {posts.map(({ node }) => {
-          const title = node.frontmatter.title || node.fields.slug;
-          const tags = node.frontmatter.tags || [];
-          return (
-            <div key={node.fields.slug}>
-              <h3
-                style={{
-                  marginBottom: rhythm(1 / 4)
-                }}
-              >
-                <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
-                  {title}
-                </Link>
-              </h3>
-              <small>{node.frontmatter.date} | {node.timeToRead} min to read</small>
-              <p
-                dangerouslySetInnerHTML={{
-                  __html: node.frontmatter.description || node.excerpt
-                }}
-              />
-              {tags.map(tag => {
-                return (
-                  <React.Fragment key={tag}>
-                    <Link to={`/tags/${tag}`}>
-                      <span>#{tag}</span>
-                    </Link>{" "}
-                  </React.Fragment>
-                );
-              })}
-            </div>
-          );
-        })}
-      </Layout>
-    );
-  }
-}
+const BlogIndex = ({ data }) => {
+  const siteTitle = data.site.siteMetadata.title;
+  const posts = data.allMarkdownRemark.edges;
+  return (
+    <Layout title={siteTitle}>
+      <SEO
+        title="All posts"
+        keywords={[
+          `blog`,
+          `gatsby`,
+          `javascript`,
+          `react`,
+          `C#`,
+          `advent-of-code`
+        ]}
+      />
+      <Bio />
+      {posts.map(({ node }) => {
+        const title = node.frontmatter.title || node.fields.slug;
+        const tags = node.frontmatter.tags || [];
+        return (
+          <div key={node.fields.slug}>
+            <h3
+              style={{
+                marginBottom: rhythm(1 / 4)
+              }}
+            >
+              <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
+                {title}
+              </Link>
+            </h3>
+            <small>
+              {node.frontmatter.date} | {node.timeToRead} min to read
+            </small>
+            <p
+              dangerouslySetInnerHTML={{
+                __html: node.frontmatter.description || node.excerpt
+              }}
+            />
+              <div style={{
+                  marginBottom: rhythm(1)
+              }}>
+            {tags.map(tag => {
+              return (
+                <React.Fragment key={tag}>
+                  <Link to={`/tags/${tag}`}>
+                    <span>#{tag}</span>
+                  </Link>{" "}
+                </React.Fragment>
+              );
+            })}
+              </div>
+              <hr/>
+          </div>
+        );
+      })}
+    </Layout>
+  );
+};
 
 export default BlogIndex;
 

@@ -19,7 +19,7 @@ body :not(pre) > code.language-text {
 }
 
 .emoji {
-    font-family: apple color emoji,segoe ui emoji,noto color emoji,android emoji,emojisymbols,emojione mozilla,twemoji mozilla,segoe ui symbol;
+    font-family: apple color emoji, segoe ui emoji, noto color emoji, android emoji, emojisymbols, emojione mozilla, twemoji mozilla, segoe ui symbol, sans-serif;
 }
 
 .gatsby-highlight-code-line {

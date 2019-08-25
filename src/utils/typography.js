@@ -1,9 +1,9 @@
 import Typography from "typography"
-import Wordpress2016 from "typography-theme-wordpress-2016"
+import Funston from "typography-theme-funston";
 import "./global.css"
 
 
-Wordpress2016.overrideThemeStyles = () => {
+Funston.overrideThemeStyles = () => {
   return {
     "a": {
       color: `var(--link)`
@@ -20,9 +20,9 @@ Wordpress2016.overrideThemeStyles = () => {
   }
 }
 
-delete Wordpress2016.googleFonts
+//delete Wordpress2016.googleFonts
 
-const typography = new Typography(Wordpress2016)
+const typography = new Typography(Funston)
 
 // Hot reload typography in development.
 if (process.env.NODE_ENV !== `production`) {
@@ -30,5 +30,5 @@ if (process.env.NODE_ENV !== `production`) {
 }
 
 export default typography
-export const rhythm = typography.rhythm
-export const scale = typography.scale
+export const rhythm = typography.rhythm;
+export const scale = typography.scale;
