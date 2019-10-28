@@ -6,11 +6,13 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
+    "build:index": "node src/utils/generate-blog-list.js",
     "next": "next"
   },
   "dependencies": {
     "@mdx-js/loader": "^1.5.1",
     "@next/mdx": "^9.1.1",
+    "glob": "^7.1.5",
     "next": "^9.1.1",
     "next-compose-plugins": "^2.2.0",
     "next-optimized-images": "^2.5.3",
