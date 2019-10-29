@@ -1,10 +1,12 @@
 import React from 'react';
-import posts from "../posts.json";
+import posts from '../posts.json';
 
 const Index = () => {
   return (
     <div>
-      {posts.map(x => <p>{x}</p>)}
+      {posts.map(x => (
+        <p>{x}</p>
+      ))}
     </div>
   );
 };
