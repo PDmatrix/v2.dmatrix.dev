@@ -25,6 +25,7 @@ declare module '@mdx-js/react' {
     | 'hr'
     | 'a'
     | 'img'
+    | 'wrapper'
   export type Components = {
     [key in ComponentType]?: React.ComponentType<{ children: React.ReactNode }>
   }
