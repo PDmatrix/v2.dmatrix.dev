@@ -3,7 +3,7 @@ import React from 'react';
 import { ThemeProvider } from 'styled-components';
 import { MDXProvider, Components } from '@mdx-js/react';
 import Layout from '../components/layout';
-import '../static/normalize.css';
+import '../static/normalize.min.css';
 
 const theme = {
   colors: {
