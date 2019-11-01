@@ -4,8 +4,10 @@ import posts from '../posts.json';
 const Index = () => {
   return (
     <div>
-      {posts.map(x => (
-        <p>{x}</p>
+      {posts.map((x: any, idx: any) => (
+        <p key={idx}>
+          <pre>{JSON.stringify(x, null, 2)}</pre>
+        </p>
       ))}
     </div>
   );
