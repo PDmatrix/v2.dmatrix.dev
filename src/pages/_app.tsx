@@ -4,6 +4,7 @@ import { ThemeProvider } from 'styled-components';
 import { MDXProvider, Components } from '@mdx-js/react';
 import Layout from '../components/layout';
 import '../static/normalize.min.css';
+import '../static/global.css';
 
 const theme = {
   colors: {

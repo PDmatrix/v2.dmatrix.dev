@@ -11,28 +11,18 @@ const glob = promisify(g);
 
 function requireMDXSync(mdxSrc) {
   const match = /export\s+const\s+meta\s+=\s+({.+?});?/gs.exec(mdxSrc);
-  return eval(`(() => (${match[1]}))()`);
+
+  return eval(`(${match[1]})`);
 }
 
 function requireMDXFileSync(path) {
   const mdxSrc = fs.readFileSync(__dirname + '/' + path, { encoding: 'utf-8' });
+
   return requireMDXSync(mdxSrc);
 }
 
 function readPostMetadata(filePath) {
-  const meta = requireMDXFileSync(filePath);
-
-  return meta;
-
-  return {
-    filePath,
-    urlPath: filePath
-      .replace(/\\/, '/')
-      .replace(/^pages/, '')
-      .replace(/\.mdx?$/, ''),
-    title: meta.title || path.basename(filePath),
-    publishDate: new Date(meta.publishDate),
-  };
+  return requireMDXFileSync(filePath);
 }
 
 (async function() {
@@ -45,7 +35,7 @@ function readPostMetadata(filePath) {
     .sort((a, b) => b.publishDate - a.publishDate);
 
   const postsJSON = JSON.stringify(posts, null, 2);
-  console.log(postsJSON);
+
   const exportPath = __dirname + '/../pages/posts.json';
 
   fs.writeFileSync(exportPath, postsJSON);
