@@ -1,5 +1,4 @@
 import React, { PropsWithChildren, ReactElement } from 'react';
-import StyledContainer from './container';
 import { Grid, Row, Col } from 'react-styled-flexboxgrid';
 
 const Layout = ({ children }: PropsWithChildren<{}>): ReactElement => {
@@ -8,16 +7,14 @@ const Layout = ({ children }: PropsWithChildren<{}>): ReactElement => {
       <Col>
         <Row>
           <Col xs>
-            <StyledContainer>Header</StyledContainer>
+            <Row>
+              <Col xs={2}>Daa</Col>
+              <Col xs={10}>Baa</Col>
+            </Row>
           </Col>
         </Row>
         <Row>
-          <Col md={10} xs={12}>
-            <StyledContainer>{children}</StyledContainer>
-          </Col>
-          <Col md={2} xs={0}>
-            <StyledContainer>aside</StyledContainer>
-          </Col>
+          <Col xs>{children}</Col>
         </Row>
       </Col>
     </Grid>

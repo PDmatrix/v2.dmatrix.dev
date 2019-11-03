@@ -5,6 +5,7 @@ import { MDXProvider, Components } from '@mdx-js/react';
 import Layout from '../components/layout';
 import '../static/normalize.min.css';
 import '../static/global.css';
+import Head from 'next/head';
 
 const theme = {
   colors: {
@@ -17,22 +18,31 @@ const components: Components = {
     props: {children: [{}], meta: {}}
    */
   // eslint-disable-next-line react/display-name
-  wrapper: props => (
-    <Layout>
-      <div {...props} />
-    </Layout>
-  ),
+  wrapper: props => <div {...props} />,
 };
 
 export default class MyApp extends App {
   render() {
     const { Component, pageProps } = this.props;
     return (
-      <ThemeProvider theme={theme}>
-        <MDXProvider components={components}>
-          <Component {...pageProps} />
-        </MDXProvider>
-      </ThemeProvider>
+      <>
+        <Head>
+          <meta charSet="utf-8" />
+          <meta httpEquiv="x-ua-compatible" content="ie=edge" />
+          <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, shrink-to-fit=no"
+          />
+          <title>Dmatrix&apos;s thoughts</title>
+        </Head>
+        <ThemeProvider theme={theme}>
+          <MDXProvider components={components}>
+            <Layout>
+              <Component {...pageProps} />
+            </Layout>
+          </MDXProvider>
+        </ThemeProvider>
+      </>
     );
   }
 }
