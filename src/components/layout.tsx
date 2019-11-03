@@ -1,51 +1,26 @@
 import React, { PropsWithChildren, ReactElement } from 'react';
-import styled from 'styled-components';
 import StyledContainer from './container';
-
-const StyledLayout = styled.div`
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 70vw;
-  padding: 2.1rem 1.05rem;
-  transition: color 0.2s ease-out 0s, background 0.2s ease-out 0s;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-`;
-
-const StyledHeader = styled.header`
-  display: flex;
-`;
-
-const StyledMain = styled.main`
-  display: flex;
-`;
-
-const StyledSection = styled.section`
-  display: flex;
-  flex: 5;
-`;
-
-const StyledAside = styled.aside`
-  display: flex;
-  flex: 1;
-`;
+import { Grid, Row, Col } from 'react-flexbox-grid';
 
 const Layout = ({ children }: PropsWithChildren<{}>): ReactElement => {
   return (
-    <StyledLayout>
-      <StyledContainer>
-        <StyledHeader>Header</StyledHeader>
-      </StyledContainer>
-      <StyledMain>
-        <StyledContainer>
-          <StyledSection>{children}</StyledSection>
-        </StyledContainer>
-        <StyledContainer>
-          <StyledAside>aside</StyledAside>
-        </StyledContainer>
-      </StyledMain>
-    </StyledLayout>
+    <Grid>
+      <Col>
+        <Row>
+          <Col xs>
+            <StyledContainer>Header</StyledContainer>
+          </Col>
+        </Row>
+        <Row>
+          <Col md={10} xs={12}>
+            <StyledContainer>{children}</StyledContainer>
+          </Col>
+          <Col md={2} xs={0}>
+            <StyledContainer>aside</StyledContainer>
+          </Col>
+        </Row>
+      </Col>
+    </Grid>
   );
 };
 
