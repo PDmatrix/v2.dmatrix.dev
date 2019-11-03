@@ -1,10 +1,5 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 
-if (typeof require !== 'undefined') {
-  require.extensions['.less'] = () => {};
-  require.extensions['.css'] = _ => {};
-}
-
 const withPlugins = require('next-compose-plugins');
 const images = require('remark-images');
 const emoji = require('remark-emoji');

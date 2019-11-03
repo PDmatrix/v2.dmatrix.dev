@@ -1,6 +1,6 @@
 import React, { PropsWithChildren, ReactElement } from 'react';
 import StyledContainer from './container';
-import { Grid, Row, Col } from 'react-flexbox-grid';
+import { Grid, Row, Col } from 'react-styled-flexboxgrid';
 
 const Layout = ({ children }: PropsWithChildren<{}>): ReactElement => {
   return (

@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "yarn run  build:index && next build",
+    "build": "yarn run build:index && next build && next export",
     "start": "next start",
     "build:index": "node src/utils/generate-blog-list.js",
     "next": "next"
@@ -19,7 +19,7 @@
     "next-optimized-images": "^2.5.3",
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
-    "react-flexbox-grid": "^2.1.2",
+    "react-styled-flexboxgrid": "^3.1.0",
     "remark-emoji": "^2.0.2",
     "remark-images": "^1.0.0",
     "styled-components": "^4.4.0"
