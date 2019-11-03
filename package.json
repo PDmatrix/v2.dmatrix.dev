@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "yarn run build:index && next build && next export",
+    "build": "yarn run build:index && next build",
     "start": "next start",
     "build:index": "node src/utils/generate-blog-list.js",
     "next": "next"
