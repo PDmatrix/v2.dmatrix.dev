@@ -1,12 +1,17 @@
 import React from 'react';
 import posts from '../posts.json';
+import Link from 'next/link';
 
 const Index = () => {
   return (
     <div>
       {posts.map((x: any, idx: any) => (
         <>
-          <h3>{x.title}</h3>
+          <Link href={`/blog/${x.link}`}>
+            <a>
+              <h3>{x.title}</h3>
+            </a>
+          </Link>
           <small>
             {new Date(x.publishDate).toLocaleString()} | {x.timeToRead}
           </small>

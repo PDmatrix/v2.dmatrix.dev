@@ -27,7 +27,7 @@ declare module '@mdx-js/react' {
     | 'img'
     | 'wrapper';
   export type Components = {
-    [key in ComponentType]?: React.ComponentType<{ children: React.ReactNode }>;
+    [key in ComponentType]?: React.ReactNode;
   };
   export interface MDXProviderProps {
     children: React.ReactNode;

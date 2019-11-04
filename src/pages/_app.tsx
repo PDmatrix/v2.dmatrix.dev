@@ -6,6 +6,10 @@ import Layout from '../components/layout';
 import '../static/normalize.min.css';
 import '../static/global.css';
 import Head from 'next/head';
+//import { TypographyStyle, GoogleFont } from 'react-typography';
+import { TypographyStyle, GoogleFont } from 'react-typography';
+import typography from '../utils/typography';
+import CodeBlocks from '../components/codeBlocks';
 
 const theme = {
   colors: {
@@ -18,7 +22,8 @@ const components: Components = {
     props: {children: [{}], meta: {}}
    */
   // eslint-disable-next-line react/display-name
-  wrapper: props => <div {...props} />,
+  wrapper: (props: any) => <div {...props} />,
+  code: CodeBlocks,
 };
 
 export default class MyApp extends App {
@@ -27,6 +32,8 @@ export default class MyApp extends App {
     return (
       <>
         <Head>
+          {/*          <TypographyStyle typography={typography} />
+          <GoogleFont typography={typography} />*/}
           <meta charSet="utf-8" />
           <meta httpEquiv="x-ua-compatible" content="ie=edge" />
           <meta
