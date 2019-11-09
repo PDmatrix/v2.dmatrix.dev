@@ -3,7 +3,6 @@ import React from 'react';
 import { ThemeProvider } from 'styled-components';
 import { MDXProvider, Components } from '@mdx-js/react';
 import Layout from '../components/layout';
-import '../static/normalize.min.css';
 import '../static/global.css';
 import Head from 'next/head';
 //import { TypographyStyle, GoogleFont } from 'react-typography';
@@ -39,6 +38,11 @@ export default class MyApp extends App {
           <meta
             name="viewport"
             content="width=device-width, initial-scale=1, shrink-to-fit=no"
+          />
+          <link
+            href="../static/normalize.min.css"
+            rel="stylesheet"
+            type="text/css"
           />
           <title>Dmatrix&apos;s thoughts</title>
         </Head>
