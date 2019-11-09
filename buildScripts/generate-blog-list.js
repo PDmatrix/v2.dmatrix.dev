@@ -29,7 +29,7 @@ function readPostMetadata(filePath) {
   const match = /blog\/(.*?)\/index\.mdx/.exec(filePath);
   postMeta.link = match[1];
 
-  return postMeta;
+  return { ...postMeta, publishDate: new Date(postMeta.publishDate) };
 }
 
 (async function() {
@@ -38,8 +38,8 @@ function readPostMetadata(filePath) {
 
   const posts = postPaths
     .map(readPostMetadata)
-    .filter(post => new Date(post.publishDate) <= now)
-    .sort((a, b) => new Date(b.publishDate) - new Date(a.publishDate));
+    .filter(post => post.publishDate <= now)
+    .sort((a, b) => b.publishDate - a.publishDate);
 
   const postsJSON = JSON.stringify(posts, null, 2);
 

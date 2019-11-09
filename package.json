@@ -23,7 +23,6 @@
     "react-syntax-highlighter": "^11.0.2",
     "react-typography": "^0.16.19",
     "remark-emoji": "^2.0.2",
-    "remark-images": "^1.0.0",
     "styled-components": "^4.4.0",
     "typography": "^0.16.19",
     "typography-theme-funston": "^0.16.19"

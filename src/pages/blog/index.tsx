@@ -13,7 +13,7 @@ const Index = () => {
             </a>
           </Link>
           <small>
-            {new Date(x.publishDate).toLocaleString()} | {x.timeToRead}
+            {x.publishDate.toLocaleString()} | {x.timeToRead}
           </small>
           <p>{x.description}</p>
           <div>
