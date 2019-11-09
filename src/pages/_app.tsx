@@ -31,18 +31,11 @@ export default class MyApp extends App {
     return (
       <>
         <Head>
-          {/*          <TypographyStyle typography={typography} />
-          <GoogleFont typography={typography} />*/}
           <meta charSet="utf-8" />
           <meta httpEquiv="x-ua-compatible" content="ie=edge" />
           <meta
             name="viewport"
             content="width=device-width, initial-scale=1, shrink-to-fit=no"
-          />
-          <link
-            href="../static/normalize.min.css"
-            rel="stylesheet"
-            type="text/css"
           />
           <title>Dmatrix&apos;s thoughts</title>
         </Head>

@@ -9,6 +9,8 @@ const g = require('glob');
 
 const glob = promisify(g);
 
+const basePath = path.join(__dirname, '../');
+
 function requireMDXSync(mdxSrc) {
   const match = /export\s+const\s+meta\s+=\s+({.+?});?/gs.exec(mdxSrc);
 
@@ -16,27 +18,32 @@ function requireMDXSync(mdxSrc) {
 }
 
 function requireMDXFileSync(path) {
-  const mdxSrc = fs.readFileSync(__dirname + '/' + path, { encoding: 'utf-8' });
+  const mdxSrc = fs.readFileSync(basePath + path, { encoding: 'utf-8' });
 
   return requireMDXSync(mdxSrc);
 }
 
 function readPostMetadata(filePath) {
-  return requireMDXFileSync(filePath);
+  const postMeta = requireMDXFileSync(filePath);
+
+  const match = /blog\/(.*?)\/index\.mdx/.exec(filePath);
+  postMeta.link = match[1];
+
+  return postMeta;
 }
 
 (async function() {
-  const postPaths = await glob('../pages/blog/**/*.mdx', { cwd: __dirname });
+  const postPaths = await glob('src/pages/blog/**/*.mdx', { cwd: basePath });
   const now = new Date();
 
   const posts = postPaths
     .map(readPostMetadata)
     .filter(post => new Date(post.publishDate) <= now)
-    .sort((a, b) => b.publishDate - a.publishDate);
+    .sort((a, b) => new Date(b.publishDate) - new Date(a.publishDate));
 
   const postsJSON = JSON.stringify(posts, null, 2);
 
-  const exportPath = __dirname + '/../pages/posts.json';
+  const exportPath = `${basePath}src/pages/posts.json`;
 
   fs.writeFileSync(exportPath, postsJSON);
 

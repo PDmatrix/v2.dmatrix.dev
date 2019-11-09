@@ -13,13 +13,22 @@ const withMDX = require('@next/mdx')({
   },
 });
 
-module.exports = withPlugins([
+const nextConfig = {
+  devIndicators: {
+    autoPrerender: false,
+  },
+};
+
+module.exports = withPlugins(
   [
-    withMDX,
-    {
-      pageExtensions: ['tsx', 'mdx'],
-    },
+    [
+      withMDX,
+      {
+        pageExtensions: ['tsx', 'mdx'],
+      },
+    ],
+    [optimizedImages],
+    [withCSS],
   ],
-  [optimizedImages],
-  [withCSS],
-]);
+  nextConfig,
+);
