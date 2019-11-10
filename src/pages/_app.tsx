@@ -12,6 +12,15 @@ import GlobalStyle from '../components/globalStyle';
 const components: Components = {
   code: CodeBlocks,
   inlineCode: InlineCode,
+  // TODO: Implement wrapper with information about post
+  // eslint-disable-next-line @typescript-eslint/ban-ts-ignore
+  // @ts-ignore
+  // eslint-disable-next-line react/display-name
+  wrapper: props => {
+    console.log(props);
+    // eslint-disable-next-line react/prop-types
+    return <div>{props.children}</div>;
+  },
 };
 
 export default class MyApp extends App {

@@ -4,6 +4,7 @@
 const fs = require('fs');
 const path = require('path');
 const { promisify } = require('util');
+const readingTime = require('reading-time');
 
 const g = require('glob');
 
@@ -20,7 +21,14 @@ function requireMDXSync(mdxSrc) {
 function requireMDXFileSync(path) {
   const mdxSrc = fs.readFileSync(basePath + path, { encoding: 'utf-8' });
 
-  return requireMDXSync(mdxSrc);
+  const meta = requireMDXSync(mdxSrc);
+  const stats = readingTime(
+    mdxSrc.replace(/export\s+const\s+meta\s+=\s+{.+?};?/s, ''),
+  );
+
+  meta.timeToRead = `${Math.ceil(stats.minutes)} min to read`;
+
+  return meta;
 }
 
 function readPostMetadata(filePath) {
