@@ -8,8 +8,6 @@ import CodeBlocks from '../components/codeBlocks';
 import InlineCode from '../components/inlineCode';
 import theme from '../utils/theme';
 import GlobalStyle from '../components/globalStyle';
-import { TypographyStyle, GoogleFont } from 'react-typography';
-import typography from '../utils/typography';
 
 const components: Components = {
   code: CodeBlocks,
@@ -22,8 +20,6 @@ export default class MyApp extends App {
     return (
       <>
         <Head>
-          <TypographyStyle typography={typography} />
-          <GoogleFont typography={typography} />
           <meta charSet="utf-8" />
           <meta httpEquiv="x-ua-compatible" content="ie=edge" />
           <meta

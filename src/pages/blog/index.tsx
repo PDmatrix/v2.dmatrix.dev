@@ -5,24 +5,24 @@ import Link from 'next/link';
 const Index = () => {
   return (
     <div>
-      {posts.map((x: any, idx: any) => (
-        <>
-          <Link href={`/blog/${x.link}`}>
-            <a>
-              <h3>{x.title}</h3>
-            </a>
-          </Link>
+      {posts.map((x: any) => (
+        <div key={x.link}>
+          <h3>
+            <Link href={`/blog/${x.link}`} passHref>
+              <a>{x.title}</a>
+            </Link>
+          </h3>
           <small>
-            {x.publishDate.toLocaleString()} | {x.timeToRead}
+            {new Date(x.publishDate).toLocaleDateString()} | {x.timeToRead}
           </small>
           <p>{x.description}</p>
           <div>
-            {x.tags.map((tag: any, idx: any) => (
-              <span key={idx}>#{tag}</span>
+            {x.tags.map((tag: any) => (
+              <span key={tag}>#{tag}&nbsp;</span>
             ))}
           </div>
           <hr />
-        </>
+        </div>
       ))}
     </div>
   );
