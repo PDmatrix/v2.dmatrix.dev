@@ -1,8 +1,8 @@
 import Document, { NextScript, Main, Head, Html } from 'next/document';
 import { ServerStyleSheet } from 'styled-components';
 import React from 'react';
-import { TypographyStyle, GoogleFont } from 'react-typography';
-import typography from '../utils/typography';
+/*import { TypographyStyle, GoogleFont } from 'react-typography';
+import typography from '../utils/typography';*/
 
 export default class MyDocument extends Document {
   static async getInitialProps(ctx: any) {
@@ -35,8 +35,8 @@ export default class MyDocument extends Document {
     return (
       <Html lang="en-US">
         <Head>
-          <TypographyStyle typography={typography} />
-          <GoogleFont typography={typography} />
+          {/*<TypographyStyle typography={typography} />
+          <GoogleFont typography={typography} />*/}
         </Head>
         <body>
           <Main />

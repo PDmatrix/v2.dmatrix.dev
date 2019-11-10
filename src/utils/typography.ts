@@ -2,17 +2,18 @@ import Typography from 'typography';
 // eslint-disable-next-line @typescript-eslint/ban-ts-ignore
 // @ts-ignore
 import Funston from 'typography-theme-funston';
+import theme from './theme';
 
 Funston.overrideThemeStyles = () => {
   return {
     a: {
-      color: `var(--link)`,
+      color: theme.colors.link,
     },
     p: {
-      color: `var(--text-normal)`,
+      color: theme.colors.textNormal,
     },
     hr: {
-      background: `var(--hr)`,
+      background: theme.colors.hr,
     },
   };
 };

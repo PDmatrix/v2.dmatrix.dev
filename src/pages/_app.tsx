@@ -3,34 +3,27 @@ import React from 'react';
 import { ThemeProvider } from 'styled-components';
 import { MDXProvider, Components } from '@mdx-js/react';
 import Layout from '../components/layout';
-import '../static/global.css';
 import Head from 'next/head';
-//import { TypographyStyle, GoogleFont } from 'react-typography';
+import CodeBlocks from '../components/codeBlocks';
+import InlineCode from '../components/inlineCode';
+import theme from '../utils/theme';
+import GlobalStyle from '../components/globalStyle';
 import { TypographyStyle, GoogleFont } from 'react-typography';
 import typography from '../utils/typography';
-import CodeBlocks from '../components/codeBlocks';
-
-const theme = {
-  colors: {
-    primary: '#0070f3',
-  },
-};
 
 const components: Components = {
-  /*
-    props: {children: [{}], meta: {}}
-   */
-  // eslint-disable-next-line react/display-name
-  wrapper: (props: any) => <div {...props} />,
   code: CodeBlocks,
+  inlineCode: InlineCode,
 };
 
 export default class MyApp extends App {
-  render() {
+  render(): JSX.Element {
     const { Component, pageProps } = this.props;
     return (
       <>
         <Head>
+          <TypographyStyle typography={typography} />
+          <GoogleFont typography={typography} />
           <meta charSet="utf-8" />
           <meta httpEquiv="x-ua-compatible" content="ie=edge" />
           <meta
@@ -42,6 +35,7 @@ export default class MyApp extends App {
         <ThemeProvider theme={theme}>
           <MDXProvider components={components}>
             <Layout>
+              <GlobalStyle />
               <Component {...pageProps} />
             </Layout>
           </MDXProvider>
