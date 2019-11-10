@@ -23,7 +23,7 @@ module.exports = withPlugins(
     [
       withMDX,
       {
-        pageExtensions: ['mdx'],
+        pageExtensions: ['tsx', 'mdx'],
       },
     ],
     [optimizedImages],
