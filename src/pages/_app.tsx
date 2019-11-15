@@ -26,10 +26,6 @@ const components: Components = {
       <Image alt={props.alt} real={originalImage} placeholder={lqipImage} />
     );
   },
-  // TODO: Implement wrapper with information about post
-  // eslint-disable-next-line @typescript-eslint/ban-ts-ignore
-  // @ts-ignore
-  // eslint-disable-next-line react/display-name
   wrapper: PostWrapper,
 };
 

@@ -39,7 +39,11 @@ function readPostMetadata(filePath) {
 
   const folderPath = (basePath + filePath).replace('index.mdx', '');
 
-  return { ...postMeta, folderPath, publishDate: new Date(postMeta.publishDate) };
+  return {
+    ...postMeta,
+    folderPath,
+    publishDate: new Date(postMeta.publishDate),
+  };
 }
 
 (async function() {
