@@ -37,7 +37,9 @@ function readPostMetadata(filePath) {
   const match = /blog\/(.*?)\/index\.mdx/.exec(filePath);
   postMeta.link = match[1];
 
-  return { ...postMeta, publishDate: new Date(postMeta.publishDate) };
+  const folderPath = (basePath + filePath).replace('index.mdx', '');
+
+  return { ...postMeta, folderPath, publishDate: new Date(postMeta.publishDate) };
 }
 
 (async function() {
