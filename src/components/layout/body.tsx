@@ -3,8 +3,10 @@ import { Row, Col } from 'react-styled-flexboxgrid';
 
 const Body = ({ children }: PropsWithChildren<{}>): ReactElement => {
   return (
-    <Row>
-      <Col xs>{children}</Col>
+    <Row center={'xs'}>
+      <Col xs={12} sm={11} md={10} lg={10}>
+        {children}
+      </Col>
     </Row>
   );
 };

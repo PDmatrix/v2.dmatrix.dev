@@ -14,8 +14,8 @@ const StyledLink = styled.a`
 
 const Header = (): ReactElement => {
   return (
-    <Row>
-      <Col xs>
+    <Row center={'xs'}>
+      <Col xs={12} sm={11} md={10} lg={10}>
         <h1>
           <Link href="/blog" passHref>
             <StyledLink>Dmatrix&apos;s thoughts</StyledLink>

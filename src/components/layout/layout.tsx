@@ -1,5 +1,5 @@
 import React, { PropsWithChildren, ReactElement } from 'react';
-import { Grid, Row, Col } from 'react-styled-flexboxgrid';
+import { Grid } from 'react-styled-flexboxgrid';
 import Header from './header';
 import Body from './body';
 
