@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-var-requires */
+
 import App from 'next/app';
 import React from 'react';
 import { ThemeProvider } from 'styled-components';
@@ -13,44 +15,37 @@ import { useRouter } from 'next/router';
 import Image from '../components/image';
 import PostWrapper from '../components/postWrapper';
 
+interface ImageProps {
+  readonly src: string;
+  readonly title: string;
+  readonly alt: string;
+}
+
+const ImageComponent = ({
+  src,
+  alt,
+  title,
+}: ImageProps): React.ReactElement => {
+  const router = useRouter();
+
+  const originalImage = require(`.${router.pathname}/${src}`);
+  const lqipImage = require(`.${router.pathname}/${src}?lqip`);
+
+  return (
+    <Image
+      title={title}
+      alt={alt}
+      real={originalImage}
+      placeholder={lqipImage}
+    />
+  );
+};
+
 const components: Components = {
   code: CodeBlocks,
   inlineCode: InlineCode,
-  // @ts-ignore
-  img: props => {
-    const router = useRouter();
-    const originalImage = require(`.${router.pathname}/${props.src}`);
-    const lqipImage = require(`.${router.pathname}/${props.src}?lqip`);
-
-    return (
-      <Image title={props.title} alt={props.alt} real={originalImage} placeholder={lqipImage} />
-    );
-  },
+  img: ImageComponent,
   wrapper: PostWrapper,
-};
-
-const enrichChildrenWithMap = (children: any, meta: any) => {
-  return recursiveMap(children, (child: any) => {
-    return React.cloneElement(child, meta);
-  });
-};
-
-const recursiveMap = (children: any, fn: any) => {
-  return React.Children.map(children, child => {
-    if (!React.isValidElement(child)) {
-      return child;
-    }
-
-    // @ts-ignore
-    if (child.props.children) {
-      child = React.cloneElement(child, {
-        // @ts-ignore
-        children: recursiveMap(child.props.children, fn),
-      });
-    }
-
-    return fn(child);
-  });
 };
 
 export default class MyApp extends App {

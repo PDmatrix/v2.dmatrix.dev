@@ -9,9 +9,7 @@ const StyledCode = styled.code`
   white-space: normal;
 `;
 
-const InlineCode = ({
-  children,
-}: PropsWithChildren<{ className: string }>): ReactElement => {
+const InlineCode = ({ children }: PropsWithChildren<{}>): ReactElement => {
   return <StyledCode>{children}</StyledCode>;
 };
 
