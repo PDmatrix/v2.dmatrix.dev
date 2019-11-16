@@ -18,6 +18,20 @@ function requireMDXSync(mdxSrc) {
   return eval(`(${match[1]})`);
 }
 
+function stringify(obj_from_json){
+  if(typeof obj_from_json !== "object" || Array.isArray(obj_from_json)){
+    // not an object, stringify using native function
+    return JSON.stringify(obj_from_json);
+  }
+  // Implements recursive object serialization according to JSON spec
+  // but without quotes around the keys.
+  let props = Object
+    .keys(obj_from_json)
+    .map(key => `${key}:${stringify(obj_from_json[key])}`)
+    .join(",");
+  return `{${props}}`;
+}
+
 function requireMDXFileSync(path) {
   const mdxSrc = fs.readFileSync(basePath + path, { encoding: 'utf-8' });
 
@@ -28,6 +42,12 @@ function requireMDXFileSync(path) {
 
   meta.timeToRead = `${Math.ceil(stats.minutes)} min to read`;
 
+  const a = `export const meta = ${JSON.stringify(meta, null, 2)};`;
+  const b = a.replace(/"([^(")]+)":/g,"$1:");
+  const t = mdxSrc.replace(/export\s+const\s+meta\s+=\s+({.+?});?/s, b);
+
+  fs.writeFileSync(basePath + path, t, { encoding: 'utf-8'});
+
   return meta;
 }
 
@@ -37,11 +57,8 @@ function readPostMetadata(filePath) {
   const match = /blog\/(.*?)\/index\.mdx/.exec(filePath);
   postMeta.link = match[1];
 
-  const folderPath = (basePath + filePath).replace('index.mdx', '');
-
   return {
     ...postMeta,
-    folderPath,
     publishDate: new Date(postMeta.publishDate),
   };
 }

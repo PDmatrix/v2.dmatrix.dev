@@ -23,7 +23,7 @@ const components: Components = {
     const lqipImage = require(`.${router.pathname}/${props.src}?lqip`);
 
     return (
-      <Image alt={props.alt} real={originalImage} placeholder={lqipImage} />
+      <Image title={props.title} alt={props.alt} real={originalImage} placeholder={lqipImage} />
     );
   },
   wrapper: PostWrapper,
