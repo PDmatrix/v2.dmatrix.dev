@@ -1,5 +1,6 @@
 import React, { PropsWithChildren, ReactElement } from 'react';
 import styled from 'styled-components';
+import Head from 'next/head';
 
 const StyledInfo = styled.p`
   font-size: 0.87055rem;
@@ -14,15 +15,23 @@ const PostWrapper = ({
   meta,
 }: PropsWithChildren<any>): ReactElement => {
   return (
-    <div>
+    <>
+      <Head>
+        <title>{meta.title} | Dmatrix&apos;s thoughts</title>
+        <meta name="description" content={meta.description} />
+        <meta name="keywords" content={meta.tags.join(', ')} />
+      </Head>
       <div>
-        <h2>{meta.title}</h2>
-        <StyledInfo>
-          {new Date(meta.publishDate).toLocaleDateString()} | {meta.timeToRead}
-        </StyledInfo>
+        <div>
+          <h2>{meta.title}</h2>
+          <StyledInfo>
+            {new Date(meta.publishDate).toLocaleDateString()} |{' '}
+            {meta.timeToRead}
+          </StyledInfo>
+        </div>
+        <div>{children}</div>
       </div>
-      <div>{children}</div>
-    </div>
+    </>
   );
 };
 
