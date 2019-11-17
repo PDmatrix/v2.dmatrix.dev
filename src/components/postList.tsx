@@ -19,11 +19,11 @@ const PostList = ({ posts }: { posts: Post[] }): React.ReactElement => (
   <div>
     {posts.map(x => (
       <div key={x.link}>
-        <h3>
+        <h2>
           <Link href={`/blog/${x.link}`} passHref>
             <a>{x.title}</a>
           </Link>
-        </h3>
+        </h2>
         <small>
           {new Date(x.publishDate).toLocaleDateString()} | {x.timeToRead}
         </small>
