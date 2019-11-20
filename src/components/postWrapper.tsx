@@ -23,7 +23,7 @@ const PostWrapper = ({
       </Head>
       <div>
         <div>
-          <h2>{meta.title}</h2>
+          <h1>{meta.title}</h1>
           <StyledInfo>
             {new Date(meta.publishDate).toLocaleDateString()} |{' '}
             {meta.timeToRead}
