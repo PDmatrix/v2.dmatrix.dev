@@ -18,6 +18,7 @@ const Post = (): React.ReactElement => {
         <meta name="keywords" content={tag as string} />
         <meta name="description" content={`Posts with a ${tag} tag`} />
       </Head>
+      <h1>Posts with tag &quot;{tag}&quot;</h1>
       <PostList posts={postsWithTag} />
     </>
   );

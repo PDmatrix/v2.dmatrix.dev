@@ -5,6 +5,7 @@ import Link from 'next/link';
 const Home = () => {
   return (
     <>
+      <h1>Dmatrix</h1>
       <Col>
         <Link href="/blog" passHref>
           <a>

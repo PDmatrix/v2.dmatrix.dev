@@ -9,6 +9,7 @@ const Index = (): React.ReactElement => (
       <title>All posts | Dmatrix&apos;s thoughts</title>
       <meta name="description" content="Personal blog for my thoughts" />
     </Head>
+    <h1>All posts</h1>
     <PostList posts={posts} />
   </>
 );
