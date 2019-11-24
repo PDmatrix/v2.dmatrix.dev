@@ -47,7 +47,7 @@ function requireMDXFileSync(path) {
 function readPostMetadata(filePath) {
   const postMeta = requireMDXFileSync(filePath);
 
-  const match = /blog\/(.*?)\/index\.mdx/.exec(filePath);
+  const match = /pages\/(.*?)\/index\.mdx/.exec(filePath);
   postMeta.link = match[1];
 
   return {
@@ -57,7 +57,7 @@ function readPostMetadata(filePath) {
 }
 
 (async function() {
-  const postPaths = await glob('src/pages/blog/**/*.mdx', { cwd: basePath });
+  const postPaths = await glob('src/pages/**/*.mdx', { cwd: basePath });
   const now = new Date();
 
   const posts = postPaths

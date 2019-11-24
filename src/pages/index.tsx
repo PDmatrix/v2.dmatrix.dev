@@ -1,40 +1,17 @@
 import React from 'react';
-import { Col } from 'react-styled-flexboxgrid';
-import Link from 'next/link';
+import posts from './posts.json';
+import PostList from '../components/postList';
+import Head from 'next/head';
 
-const Home = () => {
-  return (
-    <>
-      <h1>Dmatrix</h1>
-      <Col>
-        <Link href="/blog" passHref>
-          <a>
-            <span>Blog</span>
-          </a>
-        </Link>
-        &nbsp;
-        <Link href="/projects" passHref>
-          <a>
-            <span>Projects</span>
-          </a>
-        </Link>
-        &nbsp;
-        <a
-          href="https://github.com/PDmatrix"
-          target="_blank"
-          rel="noreferrer noopener"
-        >
-          <span>Github</span>
-        </a>
-      </Col>
-      <Col>
-        <p>
-          Hello! My name is Dmitry Sebakov and I sometimes write something in
-          here
-        </p>
-      </Col>
-    </>
-  );
-};
+const Index = (): React.ReactElement => (
+  <>
+    <Head>
+      <title>All posts | Dmatrix&apos;s thoughts</title>
+      <meta name="description" content="Personal blog for my thoughts" />
+    </Head>
+    <h1>All posts</h1>
+    <PostList posts={posts} />
+  </>
+);
 
-export default Home;
+export default Index;

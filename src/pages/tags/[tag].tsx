@@ -1,8 +1,8 @@
 import React from 'react';
 import { useRouter } from 'next/router';
 
-import posts from '../../posts.json';
-import PostList from '../../../components/postList';
+import posts from '../posts.json';
+import PostList from '../../components/postList';
 import Head from 'next/head';
 
 const Post = (): React.ReactElement => {

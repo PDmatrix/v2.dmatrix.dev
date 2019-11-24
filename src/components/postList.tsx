@@ -20,7 +20,7 @@ const PostList = ({ posts }: { posts: Post[] }): React.ReactElement => (
     {posts.map(x => (
       <div key={x.link}>
         <h2>
-          <Link href={`/blog/${x.link}`} passHref>
+          <Link href={`/${x.link}`} passHref>
             <a>{x.title}</a>
           </Link>
         </h2>
@@ -31,7 +31,7 @@ const PostList = ({ posts }: { posts: Post[] }): React.ReactElement => (
         <TagsContainer>
           {x.tags.map(tag => (
             <React.Fragment key={tag}>
-              <Link href="/blog/tags/[tag]" as={`/blog/tags/${tag}`} passHref>
+              <Link href="/tags/[tag]" as={`/tags/${tag}`} passHref>
                 <a>
                   <span key={tag}>#{tag}</span>
                 </a>
