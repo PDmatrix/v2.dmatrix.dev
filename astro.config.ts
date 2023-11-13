@@ -28,6 +28,10 @@ export default defineConfig({
     ],
     shikiConfig: {
       theme: "dracula",
+      experimentalThemes: {
+        light: "github-light",
+        dark: "dracula",
+      },
       wrap: true,
     },
   },
