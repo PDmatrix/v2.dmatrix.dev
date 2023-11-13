@@ -13,7 +13,9 @@ description: Solution to Advent of Code Year 2015 - Day 9
 
 In this puzzle, we need to help Santa deliver his presents to all locations without repeating them.
 
-### Part 1
+## Table of Contents
+
+## Part 1
 
 In the first part, we need to find the minimal distance between all of the locations. First of all, we need to get all permutations between all of the locations.
 
@@ -64,7 +66,7 @@ private static int Compute(IEnumerable<string> list,
 }
 ```
 
-### Part 2
+## Part 2
 
 In the second part, we need to find the maximum distance between locations. Everything is the same except now we need to call `.Max()` instead of `.Min()` in the result.
 

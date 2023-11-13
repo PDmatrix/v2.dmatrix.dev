@@ -13,7 +13,9 @@ description: Solution to Advent of Code Year 2015 - Day 11
 
 In today's puzzle, we need to help Santa to choose his next password. Santa has a method to create the next password based on previous. He does that by **incrementing** his old password string. Also because of corporate policy, a password should pass additional requirements like: `Passwords may not contain the letters i, o, or l`.
 
-### Part 1
+## Table of Contents
+
+## Part 1
 
 To solve this puzzle I implemented a recursive method called `Increment`. It takes one string argument and based on that argument it computes incremented string and returns it.
 
@@ -101,7 +103,7 @@ public string Part1(IEnumerable<string> lines)
 }
 ```
 
-### Part 2
+## Part 2
 
 In the second part after we got the password, we just need to increment it again and keep incrementing it until the password is valid.
 

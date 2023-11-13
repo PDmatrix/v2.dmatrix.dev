@@ -13,7 +13,9 @@ description: Solution to Advent of Code Year 2015 - Day 4
 
 Today, we are going to mine some AdventCoins. For this, we need to find MD5 hashes which, in hexadecimal, start with at least five zeroes. The input to the MD5 hash is some secret key followed by a number in decimal. We need to find the lowest number that produces such a hash.
 
-### Part 1
+## Table of Contents
+
+## Part 1
 
 In order to get hash from the string I took a function from [StackOverflow](https://stackoverflow.com/questions/11454004/calculate-a-md5-hash-from-a-string) and slightly modified it.
 
@@ -54,7 +56,7 @@ public string Part1(IEnumerable<string> input)
 }
 ```
 
-### Part 2
+## Part 2
 
 In the second part, I need to find the hash that starts at least with **6 zeroes**. The resulting code is essentially the same except one line where I check hash for six zeroes.
 

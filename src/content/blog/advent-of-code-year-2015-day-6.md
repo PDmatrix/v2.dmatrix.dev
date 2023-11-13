@@ -13,7 +13,9 @@ description: Solution to Advent of Code Year 2015 - Day 6
 
 In today's challenge, we need to deploy one million lights in a 1000x1000 grid. Furthermore, Santa has mailed us instructions on how to display an ideal lighting configuration.
 
-### Part 1
+## Table of Contents
+
+## Part 1
 
 In the first part, we need to count how many lights are lit after all instructions.
 
@@ -93,7 +95,7 @@ public string Part1(IEnumerable<string> input)
 }
 ```
 
-### Part 2
+## Part 2
 
 The second part consists of the same steps as the first part except now we need to create a grid of `int` because we need to calculate the total brightness of all lights. And of course, now we have different operations.
 

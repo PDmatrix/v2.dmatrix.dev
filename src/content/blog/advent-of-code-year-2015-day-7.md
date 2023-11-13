@@ -13,7 +13,9 @@ description: Solution to Advent of Code Year 2015 - Day 7
 
 In this challenge, we need to help little Bobby Tables to assemble the circuit. In order to do this, we have a booklet that describes how to connect parts together: `x AND y -> z` means to connect `x` and `y` to an `AND` gate, and then connect its output to wire `z`.
 
-### Part 1
+## Table of Contents
+
+## Part 1
 
 We need to find out, which signal is ultimately provided to _wire `a`_.
 My solution is based on recursive function which can calculate value of a given wire. For example, imagine that we have such instructions:
@@ -92,7 +94,7 @@ public string Part1(IEnumerable<string> input)
 }
 ```
 
-### Part 2
+## Part 2
 
 In the second part, after I computed the value of wire `a` I needed to override wire `b` to that signal, and reset the other wires (including wire `a`). After that, I needed again to find the value of wire `a`.
 

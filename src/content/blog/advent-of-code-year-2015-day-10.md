@@ -13,7 +13,9 @@ description: Solution to Advent of Code Year 2015 - Day 10
 
 In today's puzzle, the Elves are playing [look-and-say](https://en.wikipedia.org/wiki/Look-and-say_sequence). They take turns making sequences by reading aloud the previous sequence and using that reading as the next sequence. For example, `211` is read as "one two, two ones", which becomes `1221` (1 2, 2 1s).
 
-### Part 1
+## Table of Contents
+
+## Part 1
 
 In the first part, we need to apply this process to our puzzle input `40` times and get the length of the result.
 Firstly, we need to create a function that accepts the previous sequence and returning next sequence.
@@ -63,7 +65,7 @@ public string Part1(IEnumerable<string> lines)
 }
 ```
 
-### Part 2
+## Part 2
 
 In the second part, we need to call that function `50` times instead of `40`. The solution will run a little bit slower but other than that it has no difference from the first part.
 

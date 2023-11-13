@@ -13,7 +13,9 @@ description: Solution to Advent of Code Year 2015 - Day 5
 
 In today's puzzle, we need to help Santa figuring out which strings in his text file are naughty or nice.
 
-### Part 1
+## Table of Contents
+
+## Part 1
 
 A nice string is one with all of the following properties:
 
@@ -45,7 +47,7 @@ public string Part1(IEnumerable<string> input)
 }
 ```
 
-### Part 2
+## Part 2
 
 In the second part we have new properties:
 

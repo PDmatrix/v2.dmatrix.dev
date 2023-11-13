@@ -17,7 +17,9 @@ _This is my first blog post in a fascinating series of Advent of Code puzzles, w
 
 In this puzzle we got Santa trying to deliver presents in a large apartment building, but he can't find the right floor. He starts on the ground floor (floor 0) and then follows the instructions one character at a time. Instructions look like this `()(((()))(()()()((((()(((())(()(()((((((()`, where opening parenthesis `(`, means he should go up one floor and a closing parenthesis, `)`, means he should go down one floor.
 
-### Part 1
+## Table of Contents
+
+## Part 1
 
 Our goal for the first part is to find what floor does the instructions take Santa. My solution for this part is pretty easy, I take every instruction and depending on the value I either sum result by 1 or -1.
 
@@ -29,7 +31,7 @@ public string Part1(IEnumerable<string> input)
 }
 ```
 
-### Part 2
+## Part 2
 
 Second part is little trickier. Given the same instructions, we should find the position of the first character that causes him to enter the basement (floor -1).This is very similar to the first part, but instead of just summing every instruction, we can stop when we reach basement and return position of current character. In code below, I am returning `(i + 1)`, that's because position begins with `1`.
 

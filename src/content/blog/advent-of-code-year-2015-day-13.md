@@ -13,7 +13,9 @@ description: Solution to Advent of Code Year 2015 - Day 13
 
 In today's puzzle, we need to find an optimal seating arrangement for a guests.
 
-### Part 1
+## Table of Contents
+
+## Part 1
 
 In the first part, we need to calculate the right seat arrangement where total happiness would be the greatest. First, we need to get all the guests from the input.
 
@@ -122,7 +124,7 @@ private static int Compute(IEnumerable<string> list,
 }
 ```
 
-### Part 2
+## Part 2
 
 In the second part, we need to include ourselves in the guest list. As we already saw in the method `GetUnits` I have an optional parameter, called `withMe` which allows me to insert `Me` as a guest. After that, we adding new guest called `Me`. The rest of the code is the same as the first part:
 

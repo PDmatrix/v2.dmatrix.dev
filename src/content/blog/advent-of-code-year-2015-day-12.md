@@ -13,7 +13,9 @@ description: Solution to Advent of Code Year 2015 - Day 12
 
 In today's challenge we have to help Santa's Accounting-Elves. They have a `JSON` document which contains a variety of things: arrays (`[1,2,3]`), objects (`{"a":1, "b":2}`), numbers, and strings.
 
-### Part 1
+## Table of Contents
+
+## Part 1
 
 In the first part, we need to find the sum of all numbers in `JSON`. To solve this part, I used `Regex.Matches` to get all numbers from `JSON` string. Then I just iterated through all of them to get the resulting sum.
 
@@ -34,7 +36,7 @@ public string Part1(IEnumerable<string> lines)
 }
 ```
 
-### Part 2
+## Part 2
 
 In the second part, we also need to find the sum of all numbers in `JSON` but this time we need to ignore any object and all of its children which has any value `"red"`.
 
