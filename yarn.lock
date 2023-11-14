@@ -37,9 +37,9 @@
   integrity sha512-o/ObKgtMzl8SlpIdzaxFnt7SATKPxu4oIP/1NL+HDJRzxfJcAkOTAb/ZKMRyULbz4q+1t2/DAebs2Z1QairkZw==
 
 "@astrojs/compiler@^2.0.0", "@astrojs/compiler@^2.2.2", "@astrojs/compiler@^2.3.0":
-  version "2.3.0"
-  resolved "https://registry.yarnpkg.com/@astrojs/compiler/-/compiler-2.3.0.tgz#c56bc982f9640e0a9e2bcb8756dd362baee022bb"
-  integrity sha512-pxYRAaRdMS6XUll8lbFM+Lr0DI1HKIDT+VpiC+S+9di5H/nmm3znZOgdMlLiMxADot+56eps+M1BvtKfQremXA==
+  version "2.3.1"
+  resolved "https://registry.yarnpkg.com/@astrojs/compiler/-/compiler-2.3.1.tgz#0dc9b07d9241b56d10d81279bcab2f1515fac137"
+  integrity sha512-tlyFdyMzPtOQ5pr8eM0aUZmLAYKl+4liyE5JG6YV1HXSyI9RR7/bpyXCXEJDsYLDV5wYRBGxL5/xb9UVHstkMQ==
 
 "@astrojs/internal-helpers@0.2.1":
   version "0.2.1"
@@ -70,10 +70,10 @@
     vscode-html-languageservice "^5.1.0"
     vscode-uri "^3.0.8"
 
-"@astrojs/markdown-remark@3.4.0":
-  version "3.4.0"
-  resolved "https://registry.yarnpkg.com/@astrojs/markdown-remark/-/markdown-remark-3.4.0.tgz#fc15c737d41d6689223790323cb373b0fa673a7b"
-  integrity sha512-uzLSKBQ4e70aH8gEbBHZ2pnv/KOJKB3WrXFBOF0U5Uwjcr2LNWeIBLjPRQjA4tbtteELh84YPBHny21mhvBGVA==
+"@astrojs/markdown-remark@3.5.0":
+  version "3.5.0"
+  resolved "https://registry.yarnpkg.com/@astrojs/markdown-remark/-/markdown-remark-3.5.0.tgz#548069043bf574cf3db95d0ac0ea251a7ae99a3a"
+  integrity sha512-q7vdIqzYhxpsfghg2YmkmSXCfp4w7lBTYP+SSHw89wVhC5Riltr3u8w2otBRxNLSByNi+ht/gGkFC23Shetytw==
   dependencies:
     "@astrojs/prism" "^3.0.0"
     github-slugger "^2.0.0"
@@ -380,9 +380,9 @@
   integrity sha512-g013SWki6ZWhURBLOSXTaVQGWHdA0QlPJGiW4a+YpThezmJOemvc4LiKVpn13AjSKQ40QnmBqpBrxujOaSo+3A==
 
 "@commitlint/load@>6.1.1":
-  version "18.4.0"
-  resolved "https://registry.yarnpkg.com/@commitlint/load/-/load-18.4.0.tgz#81e8384ef804c2aba5decca82a643d35cbbc378e"
-  integrity sha512-7unGl1HGRNMgWrUPmj8OFkJyuNUMb6xA1i53/OAFKd9l+U3C4WTfoJe3t/TUz8vKZLCaDcWWR/b2cw5HveBBFg==
+  version "18.4.1"
+  resolved "https://registry.yarnpkg.com/@commitlint/load/-/load-18.4.1.tgz#41097fe3b0eed33e61fab6ab6015e9c4bd17de1a"
+  integrity sha512-o/plBiPJQgbSq/4ipDpsq4HCmURjBAEjr1EO/p2falr3VhwV0WGXTvb8NlihgI8xtSyO6lHvtycrE535GMLQbA==
   dependencies:
     "@commitlint/config-validator" "^18.4.0"
     "@commitlint/execute-rule" "^18.4.0"
@@ -390,7 +390,7 @@
     "@commitlint/types" "^18.4.0"
     "@types/node" "^18.11.9"
     chalk "^4.1.0"
-    cosmiconfig "^8.0.0"
+    cosmiconfig "^8.3.6"
     cosmiconfig-typescript-loader "^5.0.0"
     lodash.isplainobject "^4.0.6"
     lodash.merge "^4.6.2"
@@ -732,9 +732,9 @@
   integrity sha512-Kn7K8dx/5U6+cT1yEhpX1w4PCSg0M+XyRILPgvwcEBjerFWCwQj5sbr3/VmxqV0JGHCBCzyd6LxypEuehypY1w==
 
 "@fastify/busboy@^2.0.0":
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/@fastify/busboy/-/busboy-2.0.0.tgz#f22824caff3ae506b18207bad4126dbc6ccdb6b8"
-  integrity sha512-JUFJad5lv7jxj926GPgymrWQxxjPYuJNiNjNMzqT+HiuP6Vl3dk5xzG+8sTX96np0ZAluvaMzPsjhHZ5rNuNQQ==
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/@fastify/busboy/-/busboy-2.1.0.tgz#0709e9f4cb252351c609c6e6d8d6779a8d25edff"
+  integrity sha512-+KpH+QxZU7O4675t3mnkQKcZZg56u+K/Ct2K+N2AZYNVK8kyeo/bI18tI8aPm3tvNNRyTWfj6s5tnGNlcbQRsA==
 
 "@humanwhocodes/config-array@^0.11.13":
   version "0.11.13"
@@ -1492,13 +1492,13 @@ astro-eslint-parser@^0.16.0:
     semver "^7.3.8"
 
 astro@^3.1.3:
-  version "3.5.3"
-  resolved "https://registry.yarnpkg.com/astro/-/astro-3.5.3.tgz#bf3166ea79748369b149ee163fb3ea41768d4c23"
-  integrity sha512-08ya96yvQLdZjwYYpylzDTUGcyuA+Kw9zIT2RHfL7VzXtLTL1ZxhQjSo6CiTBH8Tcrdam88Fez+Q1awwKKajGw==
+  version "3.5.4"
+  resolved "https://registry.yarnpkg.com/astro/-/astro-3.5.4.tgz#a0cbd3811963d30f522c5c00af42684a16139e55"
+  integrity sha512-tyOd2o9KDz9hDaHmYvnY7BbRxeQ1yDxoOW4AVlxAnmHOK6068k6Bivr/C4Wlc6ON40lZ/qIDG9gfNkiEhMEVow==
   dependencies:
     "@astrojs/compiler" "^2.3.0"
     "@astrojs/internal-helpers" "0.2.1"
-    "@astrojs/markdown-remark" "3.4.0"
+    "@astrojs/markdown-remark" "3.5.0"
     "@astrojs/telemetry" "3.0.4"
     "@babel/core" "^7.22.10"
     "@babel/generator" "^7.22.10"
@@ -1747,9 +1747,9 @@ camelize@^1.0.0:
   integrity sha512-dU+Tx2fsypxTgtLoE36npi3UqcjSSMNYfkqgmoEhtZrraP5VWq0K7FkWVTYa8eMPtnU/G2txVsfdCJTn9uzpuQ==
 
 caniuse-lite@^1.0.30001538, caniuse-lite@^1.0.30001541:
-  version "1.0.30001561"
-  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001561.tgz#752f21f56f96f1b1a52e97aae98c57c562d5d9da"
-  integrity sha512-NTt0DNoKe958Q0BE0j0c1V9jbUzhBxHIEJy7asmGrpE0yG63KTV7PLHPnK2E1O9RsQrQ081I3NLuXGS6zht3cw==
+  version "1.0.30001562"
+  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001562.tgz#9d16c5fd7e9c592c4cd5e304bc0f75b0008b2759"
+  integrity sha512-kfte3Hym//51EdX4239i+Rmp20EsLIYGdPkERegTgU19hQWCRhsRFGKHTliUlsry53tv17K7n077Kqa0WJU4ng==
 
 ccount@^2.0.0:
   version "2.0.1"
@@ -2025,7 +2025,7 @@ cosmiconfig-typescript-loader@^5.0.0:
   dependencies:
     jiti "^1.19.1"
 
-cosmiconfig@^8.0.0:
+cosmiconfig@^8.3.6:
   version "8.3.6"
   resolved "https://registry.yarnpkg.com/cosmiconfig/-/cosmiconfig-8.3.6.tgz#060a2b871d66dba6c8538ea1118ba1ac16f5fae3"
   integrity sha512-kcZ6+W5QzcJ3P1Mt+83OUv/oHFqZHIx8DuxG6eZ5RGMERoLqp4BuGjhHLYGK+Kf5XVkQvqBSmAy/nGWN3qDgEA==
@@ -2349,9 +2349,9 @@ eastasianwidth@^0.2.0:
   integrity sha512-I88TYZWc9XiYHRQ4/3c5rjjfgkjhLyW2luGIheGERbNQ6OY7yTybanSpDXZa8y7VUP9YmDcYa+eyq4ca7iLqWA==
 
 electron-to-chromium@^1.4.535:
-  version "1.4.582"
-  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.4.582.tgz#4908215182266793499ac57d80e2680d7dd9b3db"
-  integrity sha512-89o0MGoocwYbzqUUjc+VNpeOFSOK9nIdC5wY4N+PVUarUK0MtjyTjks75AZS2bW4Kl8MdewdFsWaH0jLy+JNoA==
+  version "1.4.583"
+  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.4.583.tgz#7b0ac4f36388da4b5485788adb92cd7dd0abffc4"
+  integrity sha512-93y1gcONABZ7uqYe/JWDVQP/Pj/sQSunF0HVAPdlg/pfBnOyBMLlQUxWvkqcljJg1+W6cjvPuYD+r1Th9Tn8mA==
 
 emmet@^2.4.3:
   version "2.4.6"
@@ -2814,9 +2814,9 @@ findup-sync@^4.0.0:
     resolve-dir "^1.0.1"
 
 flat-cache@^3.0.4:
-  version "3.1.1"
-  resolved "https://registry.yarnpkg.com/flat-cache/-/flat-cache-3.1.1.tgz#a02a15fdec25a8f844ff7cc658f03dd99eb4609b"
-  integrity sha512-/qM2b3LUIaIgviBQovTLvijfyOQXPtSRnRK26ksj2J7rzPIecePUIpJsZ4T02Qg+xiAEKIs5K8dsHEd+VaKa/Q==
+  version "3.2.0"
+  resolved "https://registry.yarnpkg.com/flat-cache/-/flat-cache-3.2.0.tgz#2c0c2d5040c99b1632771a9d105725c0115363ee"
+  integrity sha512-CYcENa+FtcUKLmhhqyctpclsq7QF38pKjZHsGNiSQF5r4FtoKDWabFDl3hzaEQMvT1LHEysw5twgLvpYYb4vbw==
   dependencies:
     flatted "^3.2.9"
     keyv "^4.5.3"

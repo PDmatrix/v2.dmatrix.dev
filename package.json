@@ -1,5 +1,5 @@
 {
-  "name": "",
+  "name": "dmatrix.dev",
   "version": "3.0.0",
   "scripts": {
     "dev": "astro dev",
