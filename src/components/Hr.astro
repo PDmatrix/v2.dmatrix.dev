@@ -2,11 +2,20 @@
 export interface Props {
   noPadding?: boolean;
   ariaHidden?: boolean;
+  text?: string;
 }
 
-const { noPadding = false, ariaHidden = true } = Astro.props;
+const { noPadding = false, ariaHidden = true, text } = Astro.props;
 ---
 
-<div class={`max-w-3xl mx-auto ${noPadding ? "px-0" : "px-4"}`}>
-  <hr class="border-skin-line" aria-hidden={ariaHidden} />
+<div
+  class={`max-w-3xl mx-auto relative flex items-center ${
+    noPadding ? "px-0" : "px-4"
+  }`}
+>
+  <div class="flex-grow border-t border-skin-line" aria-hidden={ariaHidden}>
+  </div>
+  {text && <span class="mx-4 flex-shrink ">{text}</span>}
+  <div class="flex-grow border-t border-skin-line" aria-hidden={ariaHidden}>
+  </div>
 </div>

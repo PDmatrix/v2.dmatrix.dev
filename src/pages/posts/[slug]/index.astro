@@ -2,6 +2,7 @@
 import { type CollectionEntry, getCollection } from "astro:content";
 import Posts from "@layouts/Posts.astro";
 import PostDetails from "@layouts/PostDetails.astro";
+import Hr from "@components/Hr.astro";
 import getSortedPosts from "@utils/getSortedPosts";
 import getPageNumbers from "@utils/getPageNumbers";
 import getPostsWithRT from "@utils/getPostsWithRT";
@@ -46,11 +47,23 @@ const lastPost = currentPage * SITE.postPerPage;
 const startPost = lastPost - SITE.postPerPage;
 
 const paginatedPosts = sortedPosts.slice(startPost, lastPost);
+
+let nextPost = null;
+let prevPost = null;
+if (post) {
+  const currentPostIndex = sortedPosts.findIndex(p => p.id === post.id);
+  if (currentPostIndex !== sortedPosts.length - 1) {
+    nextPost = sortedPosts[currentPostIndex + 1];
+  }
+  if (currentPostIndex !== 0) {
+    prevPost = sortedPosts[currentPostIndex - 1];
+  }
+}
 ---
 
 {
   post ? (
-    <PostDetails post={post} />
+    <PostDetails post={post} nextPost={nextPost} prevPost={prevPost} />
   ) : (
     <Posts
       posts={paginatedPosts}

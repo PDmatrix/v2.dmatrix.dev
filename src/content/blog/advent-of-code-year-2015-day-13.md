@@ -90,7 +90,7 @@ private static Dictionary<string, Dictionary<string, int>> GetUnits(IEnumerable<
 }
 ```
 
-Next thing, we need to create permutations of all guests. To do that we can use the method from the [ninth day](/advent-of-code-year-2015-day-9). After all that, we can easily compute the total happiness of all guest permutations and pick the highest value.
+Next thing, we need to create permutations of all guests. To do that we can use the method from the [ninth day](/posts/advent-of-code-year-2015-day-9). After all that, we can easily compute the total happiness of all guest permutations and pick the highest value.
 
 ```csharp
 public string Part1(IEnumerable<string> lines)
