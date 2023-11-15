@@ -1,5 +1,5 @@
 {
-  "name": "",
+  "name": "dmatrix.dev",
   "version": "3.0.0",
   "scripts": {
     "dev": "astro dev",
@@ -60,5 +60,6 @@
     "*.{js,jsx,ts,tsx,md,mdx,json}": [
       "prettier --plugin-search-dir=. --write"
     ]
-  }
+  },
+  "packageManager": "yarn@4.0.2"
 }

@@ -1,4 +1,3 @@
-import type { MarkdownInstance } from "astro";
 import slugify from "./slugify";
 import type { CollectionEntry } from "astro:content";
 

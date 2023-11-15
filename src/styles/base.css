@@ -134,8 +134,8 @@
   }
 }
 
-html[data-theme="dark"] .shiki-themes,
-html[data-theme="dark"] .shiki-themes span {
+html[data-theme="dark"] .astro-code-themes,
+html[data-theme="dark"] .astro-code-themes span {
   color: var(--shiki-dark) !important;
   background-color: var(--shiki-dark-bg) !important;
   /* Optional, if you also want font styles */
