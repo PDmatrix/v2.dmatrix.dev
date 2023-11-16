@@ -47,15 +47,15 @@ const startPost = lastPost - SITE.postPerPage;
 
 const paginatedPosts = sortedPosts.slice(startPost, lastPost);
 
-let nextPost = null
-let prevPost = null
+let nextPost = null;
+let prevPost = null;
 if (post) {
-  const currentPostIndex = sortedPosts.findIndex((p) => p.id === post.id)
+  const currentPostIndex = sortedPosts.findIndex(p => p.id === post.id);
   if (currentPostIndex !== sortedPosts.length - 1) {
-    nextPost = sortedPosts[currentPostIndex + 1]
+    nextPost = sortedPosts[currentPostIndex + 1];
   }
   if (currentPostIndex !== 0) {
-    prevPost = sortedPosts[currentPostIndex - 1]
+    prevPost = sortedPosts[currentPostIndex - 1];
   }
 }
 ---
