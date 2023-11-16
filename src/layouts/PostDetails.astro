@@ -84,7 +84,7 @@ const ogUrl = new URL(
           <LinkButton
             href={`/posts/${prevPost.slug}`}
             className={`mr-4 select-none`}
-            ariaLabel="Prev Post"
+            ariaLabel={prevPost.data.title}
           >
             <svg xmlns="http://www.w3.org/2000/svg">
               <path d="M12.707 17.293 8.414 13H18v-2H8.414l4.293-4.293-1.414-1.414L4.586 12l6.707 6.707z" />
@@ -99,7 +99,7 @@ const ogUrl = new URL(
           <LinkButton
             href={`/posts/${nextPost.slug}`}
             className={`ml-4 select-none`}
-            ariaLabel="Next Post"
+            ariaLabel={nextPost.data.title}
           >
             {nextPost.data.title}
             <svg xmlns="http://www.w3.org/2000/svg">
