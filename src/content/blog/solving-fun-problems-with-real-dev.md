@@ -1,12 +1,18 @@
 ---
-pubDatetime: 2019-08-29T15:22:00Z
 title: Solving fun problems with Real Dev
+pubDatetime: 2019-08-29T15:22:00Z
 postSlug: solving-fun-problems-with-real-dev
-featured: true
+featured: false
 draft: false
 tags:
   - fun
 description: Solving fun problems with Real Dev, great project for programmers!
+---
+
+**UPDATE**
+
+The [**Real Dev**](https://real.dev) site is down for some reason, so this post is not very actual. But at least you can see [my solutions here](https://github.com/PDmatrix/real-dev-projects) ;)
+
 ---
 
 Hello everyone! 👋

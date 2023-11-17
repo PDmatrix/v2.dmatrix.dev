@@ -5,6 +5,7 @@ postSlug: advent-of-code-year-2015-day-5
 featured: false
 draft: false
 tags:
+  - aoc
   - aoc-2015
 description: Solution to Advent of Code Year 2015 - Day 5
 ---
@@ -54,7 +55,7 @@ In the second part we have new properties:
 - It contains a pair of any two letters that appears at least twice in the string without overlapping, like xyxy (xy) or aabcdefgaa (aa), but not like aaa (aa, but it overlaps).
 - It contains at least one letter which repeats with exactly one letter between them, like xyx, abcdefeghi (efe), or even aaa.
 
-The solution is very much like the first part, except now we have two methods and different regular expressions.
+The solution is very much like [the first part](#part-1), except now we have two methods and different regular expressions.
 
 ```csharp
 public string Part2(IEnumerable<string> input)

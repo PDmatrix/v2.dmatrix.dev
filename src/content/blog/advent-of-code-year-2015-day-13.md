@@ -5,6 +5,7 @@ postSlug: advent-of-code-year-2015-day-13
 featured: false
 draft: false
 tags:
+  - aoc
   - aoc-2015
 description: Solution to Advent of Code Year 2015 - Day 13
 ---
@@ -55,7 +56,7 @@ After that, we need to somehow represent units of happiness of all guests. I dec
 }
 ```
 
-Here's the code for this. In this function I also have `withMe` parameter, don't mind it now, we are going use it in the second part:
+Here's the code for this. In this function I also have `withMe` parameter, don't mind it now, we are going use it in the [second part](#part-2):
 
 ```csharp
 private static Dictionary<string, Dictionary<string, int>> GetUnits(IEnumerable<string> lines, bool withMe = false)
@@ -126,7 +127,7 @@ private static int Compute(IEnumerable<string> list,
 
 ## Part 2
 
-In the second part, we need to include ourselves in the guest list. As we already saw in the method `GetUnits` I have an optional parameter, called `withMe` which allows me to insert `Me` as a guest. After that, we adding new guest called `Me`. The rest of the code is the same as the first part:
+In the second part, we need to include ourselves in the guest list. As we already saw in the method `GetUnits` I have an optional parameter, called `withMe` which allows me to insert `Me` as a guest. After that, we adding new guest called `Me`. The rest of the code is the same as the [first part](#part-1):
 
 ```csharp
 public string Part2(IEnumerable<string> lines)

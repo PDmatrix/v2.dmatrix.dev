@@ -5,6 +5,7 @@ postSlug: advent-of-code-year-2015-day-7
 featured: false
 draft: false
 tags:
+  - aoc
   - aoc-2015
 description: Solution to Advent of Code Year 2015 - Day 7
 ---

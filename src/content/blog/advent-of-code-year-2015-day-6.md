@@ -5,6 +5,7 @@ postSlug: advent-of-code-year-2015-day-6
 featured: false
 draft: false
 tags:
+  - aoc
   - aoc-2015
 description: Solution to Advent of Code Year 2015 - Day 6
 ---
@@ -97,7 +98,7 @@ public string Part1(IEnumerable<string> input)
 
 ## Part 2
 
-The second part consists of the same steps as the first part except now we need to create a grid of `int` because we need to calculate the total brightness of all lights. And of course, now we have different operations.
+The second part consists of the same steps as [the first part](#part-1) except now we need to create a grid of `int` because we need to calculate the total brightness of all lights. And of course, now we have different operations.
 
 ```csharp
 public string Part2(IEnumerable<string> input)
