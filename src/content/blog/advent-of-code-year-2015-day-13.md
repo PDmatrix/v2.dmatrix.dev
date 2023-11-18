@@ -37,7 +37,7 @@ private static IEnumerable<string> GetGuests(IEnumerable<string> lines)
 }
 ```
 
-After that, we need to somehow represent units of happiness of all guests. I decided to use `Dictionary` where the key is a guest name and the value is another `Dictionary` where stored other guests with units of happiness, e.g:
+After that, we need to somehow represent units of happiness of all guests. We decided to use `Dictionary` where the key is a guest name and the value is another `Dictionary` where stored other guests with units of happiness, e.g:
 
 ```json
 {
@@ -56,7 +56,7 @@ After that, we need to somehow represent units of happiness of all guests. I dec
 }
 ```
 
-Here's the code for this. In this function I also have `withMe` parameter, don't mind it now, we are going use it in the [second part](#part-2):
+Here's the code for this. In this function we also have `withMe` parameter, don't mind it now, we are going use it in the [second part](#part-2):
 
 ```csharp
 private static Dictionary<string, Dictionary<string, int>> GetUnits(IEnumerable<string> lines, bool withMe = false)

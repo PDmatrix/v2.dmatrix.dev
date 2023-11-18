@@ -34,7 +34,7 @@ public string Part1(IEnumerable<string> input)
 
 ## Part 2
 
-Second part is little trickier. Given the same instructions, we should find the position of the first character that causes him to enter the basement (floor `-1`).This is very similar to [the first part](#part-1), but instead of just summing every instruction, we can stop when we reach basement and return position of current character. In code below, I am returning `(i + 1)`, that's because position begins with `1`.
+Second part is little trickier. Given the same instructions, we should find the position of the first character that causes him to enter the basement (floor `-1`). This is very similar to [the first part](#part-1), but instead of just summing every instruction, we can stop when we reach basement and return position of current character. In code below, we are returning `(i + 1)`, that's because position begins with `1`.
 
 ```csharp
 public string Part2(IEnumerable<string> input)

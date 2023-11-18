@@ -18,7 +18,7 @@ In this puzzle, we have Santa delivering presents to an infinite two-dimensional
 
 ## Part 1
 
-For this part, I created an anonymous object (**1**) for Santa's location and HashSet of points (**2**). After that, I go through all of the directions and compute Santa's new location based on the direction and the previous location and add it to the HashSet of points (**3**).
+For the first part, we created an anonymous object (**1**) for Santa's location and HashSet of points (**2**). After that, we go through all of the directions and compute Santa's new location based on the direction and the previous location and add it to the HashSet of points (**3**).
 
 ```csharp
 public string Part1(IEnumerable<string> input)
@@ -44,7 +44,7 @@ public string Part1(IEnumerable<string> input)
 
 ## Part 2
 
-In the second part, we have Santa and Robo-Santa to deliver presents. I created two objects that represent the location of the Santa's (**1**) and boolean variable for Santa's turn (**2**) then, based on this variable I am computing the new location and adding it to the HashSet of points.
+In the second part, we have Santa and Robo-Santa to deliver presents. We created two objects that represent the location of the Santa's (**1**) and boolean variable for Santa's turn (**2**) then, based on this variable we are computing the new location and adding it to the HashSet of points.
 
 ```csharp
 public string Part2(IEnumerable<string> input)

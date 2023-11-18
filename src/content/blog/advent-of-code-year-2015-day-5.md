@@ -20,9 +20,9 @@ In today's puzzle, we need to help Santa figuring out which strings in his text 
 
 A nice string is one with all of the following properties:
 
-- It contains at least three vowels (aeiou only), like aei, xazegov, or aeiouaeiouaeiou.
-- It contains at least one letter that appears twice in a row, like xx, abcdde (dd), or aabbccdd (aa, bb, cc, or dd).
-- It does not contain the strings ab, cd, pq, or xy, even if they are part of one of the other requirements.
+- It contains at least three vowels (aeiou only), like `aei`, `xazegov`, or `aeiouaeiouaeiou`.
+- It contains at least one letter that appears twice in a row, like `xx`, `abcdde` (**dd**), or `aabbccdd` (**aa**, **bb**, **cc**, or **dd**).
+- It does not contain the strings `ab`, `cd`, `pq`, or `xy`, even if they are part of one of the other requirements.
 
 The easiest way to solve this part is to use regular expressions.
 
@@ -52,8 +52,8 @@ public string Part1(IEnumerable<string> input)
 
 In the second part we have new properties:
 
-- It contains a pair of any two letters that appears at least twice in the string without overlapping, like xyxy (xy) or aabcdefgaa (aa), but not like aaa (aa, but it overlaps).
-- It contains at least one letter which repeats with exactly one letter between them, like xyx, abcdefeghi (efe), or even aaa.
+- It contains a pair of any two letters that appears at least twice in the string without overlapping, like `xyxy` (**xy**) or `aabcdefgaa` (**aa**), but not like `aaa` (**aa**, but it overlaps).
+- It contains at least one letter which repeats with exactly one letter between them, like `xyx`, `abcdefeghi` (efe), or even `aaa`.
 
 The solution is very much like [the first part](#part-1), except now we have two methods and different regular expressions.
 
