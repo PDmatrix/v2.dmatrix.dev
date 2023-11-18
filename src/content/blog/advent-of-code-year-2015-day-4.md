@@ -5,6 +5,7 @@ postSlug: advent-of-code-year-2015-day-4
 featured: false
 draft: false
 tags:
+  - aoc
   - aoc-2015
 description: Solution to Advent of Code Year 2015 - Day 4
 ---
@@ -17,7 +18,7 @@ Today, we are going to mine some AdventCoins. For this, we need to find MD5 hash
 
 ## Part 1
 
-In order to get hash from the string I took a function from [StackOverflow](https://stackoverflow.com/questions/11454004/calculate-a-md5-hash-from-a-string) and slightly modified it.
+In order to get hash from the string we took a function from [StackOverflow](https://stackoverflow.com/questions/11454004/calculate-a-md5-hash-from-a-string) and slightly modified it.
 
 ```csharp
 private static string CreateMd5(string input)
@@ -37,7 +38,7 @@ private static string CreateMd5(string input)
 }
 ```
 
-And then I used it to generate the new hash and when the hash starts with five zeros I return the number.
+And then we used it to generate the new hash and when the hash starts with five zeros we return the number.
 
 ```csharp
 public string Part1(IEnumerable<string> input)
@@ -58,7 +59,7 @@ public string Part1(IEnumerable<string> input)
 
 ## Part 2
 
-In the second part, I need to find the hash that starts at least with **6 zeroes**. The resulting code is essentially the same except one line where I check hash for six zeroes.
+In the second part, we need to find the hash that starts at least with **6 zeroes**. The resulting code is essentially the same except one line where we check hash for six zeroes.
 
 ```csharp
 public string Part2(IEnumerable<string> input)

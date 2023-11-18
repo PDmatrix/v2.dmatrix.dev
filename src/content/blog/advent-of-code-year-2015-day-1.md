@@ -5,6 +5,7 @@ postSlug: advent-of-code-year-2015-day-1
 featured: false
 draft: false
 tags:
+  - aoc
   - aoc-2015
 description: Solution to Advent of Code Year 2015 - Day 1
 ---
@@ -21,7 +22,7 @@ In this puzzle we got Santa trying to deliver presents in a large apartment buil
 
 ## Part 1
 
-Our goal for the first part is to find what floor does the instructions take Santa. My solution for this part is pretty easy, I take every instruction and depending on the value I either sum result by 1 or -1.
+Our goal for the first part is to find what floor does the instructions take Santa. Solution for this part is pretty easy, we take every instruction and depending on the value we either sum result by `1` or `-1`.
 
 ```csharp
 public string Part1(IEnumerable<string> input)
@@ -33,7 +34,7 @@ public string Part1(IEnumerable<string> input)
 
 ## Part 2
 
-Second part is little trickier. Given the same instructions, we should find the position of the first character that causes him to enter the basement (floor -1).This is very similar to the first part, but instead of just summing every instruction, we can stop when we reach basement and return position of current character. In code below, I am returning `(i + 1)`, that's because position begins with `1`.
+Second part is little trickier. Given the same instructions, we should find the position of the first character that causes him to enter the basement (floor `-1`). This is very similar to [the first part](#part-1), but instead of just summing every instruction, we can stop when we reach basement and return position of current character. In code below, we are returning `(i + 1)`, that's because position begins with `1`.
 
 ```csharp
 public string Part2(IEnumerable<string> input)

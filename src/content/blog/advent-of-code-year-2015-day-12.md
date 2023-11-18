@@ -5,6 +5,7 @@ postSlug: advent-of-code-year-2015-day-12
 featured: false
 draft: false
 tags:
+  - aoc
   - aoc-2015
 description: Solution to Advent of Code Year 2015 - Day 12
 ---
@@ -17,7 +18,7 @@ In today's challenge we have to help Santa's Accounting-Elves. They have a `JSON
 
 ## Part 1
 
-In the first part, we need to find the sum of all numbers in `JSON`. To solve this part, I used `Regex.Matches` to get all numbers from `JSON` string. Then I just iterated through all of them to get the resulting sum.
+In the first part, we need to find the sum of all numbers in `JSON`. To solve this part, we used `Regex.Matches` to get all numbers from `JSON` string. Then we just iterated through all of them to get the resulting sum.
 
 ```csharp
 public string Part1(IEnumerable<string> lines)
@@ -40,7 +41,7 @@ public string Part1(IEnumerable<string> lines)
 
 In the second part, we also need to find the sum of all numbers in `JSON` but this time we need to ignore any object and all of its children which has any value `"red"`.
 
-This time we can't just parse all numbers, so we have to parse `JSON` itself. To do that, I used a library called `Json.NET`. I created a method that can figure out which method should be called with a given token. For example, if the token is `object`, then `ProcessObject` method will be called.
+This time we can't just parse all numbers, so we have to parse `JSON` itself. To do that, we used a library called `Json.NET`. We created a method that can figure out which method should be called with a given token. For example, if the token is `object`, then `ProcessObject` method will be called.
 
 ```csharp
 private static int ProcessToken(JToken token)
@@ -59,7 +60,7 @@ private static int ProcessToken(JToken token)
 }
 ```
 
-- To process array, I need to call `ProcessToken` on all elements of that array.
+- To process array, we need to call `ProcessToken` on all elements of that array.
 
 ```csharp
 private static int ProcessArray(JArray array)
@@ -68,7 +69,7 @@ private static int ProcessArray(JArray array)
 }
 ```
 
-- To process value I need to try parse value to an integer and if that parse succeeds then I am returning it otherwise I am returning `0`.
+- To process value we need to try parse value to an integer and if that parse succeeds then we are returning it otherwise we are returning `0`.
 
 ```csharp
 private static int ProcessValue(JValue value)
@@ -77,7 +78,7 @@ private static int ProcessValue(JValue value)
 }
 ```
 
-- Parsing object a little bit more difficult. First, I need to iterate through all of the properties to check if that property contains the value `"red"`. If `"red"` is found I am returning return value `0`. Otherwise, I call `ProcessToken` on all properties and get the sum.
+- Parsing object a little bit more difficult. First, we need to iterate through all of the properties to check if that property contains the value `"red"`. If `"red"` is found we are returning return value `0`. Otherwise, we call `ProcessToken` on all properties and get the sum.
 
 ```csharp
 private static int ProcessObject(JObject jObject)

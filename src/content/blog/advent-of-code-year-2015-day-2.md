@@ -5,6 +5,7 @@ postSlug: advent-of-code-year-2015-day-2
 featured: false
 draft: false
 tags:
+  - aoc
   - aoc-2015
 description: Solution to Advent of Code Year 2015 - Day 2
 ---
@@ -38,7 +39,7 @@ public string Part1(IEnumerable<string> input)
 
 ## Part 2
 
-In the second part we have to find how many total feet of ribbon should they order. To find the answer, we are getting input, sorting it. Then, we are multiplying the first two items by 2 to get the shortest distance and then summing it by cubic feet of volume of the present to get result.
+In the second part we have to find how many total feet of ribbon should they order. To find the answer, we are getting input, sorting it. Then, we are multiplying the first two items by `2` to get the shortest distance and then summing it by cubic feet of volume of the present to get result.
 
 ```csharp
 public string Part2(IEnumerable<string> input)

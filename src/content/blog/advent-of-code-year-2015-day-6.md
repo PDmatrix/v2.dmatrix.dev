@@ -5,13 +5,14 @@ postSlug: advent-of-code-year-2015-day-6
 featured: false
 draft: false
 tags:
+  - aoc
   - aoc-2015
 description: Solution to Advent of Code Year 2015 - Day 6
 ---
 
 ## --- Day 6: Probably a Fire Hazard ---
 
-In today's challenge, we need to deploy one million lights in a 1000x1000 grid. Furthermore, Santa has mailed us instructions on how to display an ideal lighting configuration.
+In today's challenge, we need to deploy one million lights in a **1000x1000** grid. Furthermore, Santa has mailed us instructions on how to display an ideal lighting configuration.
 
 ## Table of Contents
 
@@ -19,7 +20,7 @@ In today's challenge, we need to deploy one million lights in a 1000x1000 grid. 
 
 In the first part, we need to count how many lights are lit after all instructions.
 
-First of all, I created an Instruction class which consist of StartX, StartY, EndX, EndY, and an Operation.
+First of all, we created an `Instruction` class which consist of `StartX`, `StartY`, `EndX`, `EndY`, and an `Operation`.
 
 ```csharp
 private class Instruction
@@ -32,7 +33,7 @@ private class Instruction
 }
 ```
 
-Next, I created a function which parses the input and returns a list of Instruction objects.
+Next, we created a function which parses the input and returns a list of `Instruction` objects.
 
 ```csharp
 private static IEnumerable<Instruction> GetInstructions(IEnumerable<string> input)
@@ -51,7 +52,7 @@ private static IEnumerable<Instruction> GetInstructions(IEnumerable<string> inpu
 }
 ```
 
-After that, all I need to do is to create 1000x1000 bool grid then iterate through instructions and change grid values in a box with start coordinate (StartX, StartY) and end coordinate (EndX, EndY) based on the operation.
+After that, all we need to do is to create **1000x1000** bool grid then iterate through instructions and change grid values in a box with start coordinate (`StartX`, `StartY`) and end coordinate (`EndX`, `EndY`) based on the operation.
 
 ```csharp
 public string Part1(IEnumerable<string> input)
@@ -97,7 +98,7 @@ public string Part1(IEnumerable<string> input)
 
 ## Part 2
 
-The second part consists of the same steps as the first part except now we need to create a grid of `int` because we need to calculate the total brightness of all lights. And of course, now we have different operations.
+The second part consists of the same steps as [the first part](#part-1), except now we need to create a grid of `int` because we need to calculate the total brightness of all lights. And of course, now we have different operations.
 
 ```csharp
 public string Part2(IEnumerable<string> input)

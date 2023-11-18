@@ -5,6 +5,7 @@ postSlug: advent-of-code-year-2015-day-11
 featured: false
 draft: false
 tags:
+  - aoc
   - aoc-2015
 description: Solution to Advent of Code Year 2015 - Day 11
 ---
@@ -17,7 +18,7 @@ In today's puzzle, we need to help Santa to choose his next password. Santa has 
 
 ## Part 1
 
-To solve this puzzle I implemented a recursive method called `Increment`. It takes one string argument and based on that argument it computes incremented string and returns it.
+To solve this puzzle we implemented a recursive method called `Increment`. It takes one string argument and based on that argument it computes incremented string and returns it.
 
 ```csharp
 private static string Increment(string s)
@@ -35,7 +36,7 @@ private static string Increment(string s)
 }
 ```
 
-Next, I implemented requirements in different methods:
+Next, we implemented requirements in different methods:
 
 - Passwords must include one increasing straight of at least three letters, like `abc`, `bcd`, `cde`, and so on, up to `xyz`. They cannot skip letters; `abd` doesn't count.
 
@@ -79,7 +80,7 @@ private static bool HasAtLeastTwoDifferentPairs(string input)
 }
 ```
 
-After that, I created the method `IsValid` to check if the password is meeting requirements or not.
+After that, we created the method `IsValid` to check if the password is meeting requirements or not.
 
 ```csharp
 private static bool IsValid(string input)
@@ -90,7 +91,7 @@ private static bool IsValid(string input)
 }
 ```
 
-Finally, all I needed to do is to call the `Increment` method until the password became valid.
+Finally, all we needed to do is to call the `Increment` method until the password became valid.
 
 ```csharp
 public string Part1(IEnumerable<string> lines)
