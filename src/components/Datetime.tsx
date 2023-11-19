@@ -5,6 +5,7 @@ export interface Props {
   size?: "sm" | "lg";
   className?: string;
   readingTime?: string;
+  showTime?: boolean;
 }
 
 export default function Datetime({
@@ -12,6 +13,7 @@ export default function Datetime({
   size = "sm",
   className,
   readingTime,
+  showTime,
 }: Props) {
   return (
     <div className={`flex items-center space-x-2 opacity-80 ${className}`}>
@@ -27,14 +29,20 @@ export default function Datetime({
       </svg>
       <span className="sr-only">Posted on:</span>
       <span className={`italic ${size === "sm" ? "text-sm" : "text-base"}`}>
-        <FormattedDatetime datetime={datetime} />
+        <FormattedDatetime datetime={datetime} showTime={showTime} />
         <span> ({readingTime})</span>
       </span>
     </div>
   );
 }
 
-const FormattedDatetime = ({ datetime }: { datetime: string | Date }) => {
+const FormattedDatetime = ({
+  datetime,
+  showTime,
+}: {
+  datetime: string | Date;
+  showTime: boolean;
+}) => {
   const myDatetime = new Date(datetime);
 
   const date = myDatetime.toLocaleDateString(LOCALE, {
@@ -51,9 +59,13 @@ const FormattedDatetime = ({ datetime }: { datetime: string | Date }) => {
   return (
     <>
       {date}
-      <span aria-hidden="true"> | </span>
-      <span className="sr-only">&nbsp;at&nbsp;</span>
-      {time}
+      {showTime && (
+        <>
+          <span aria-hidden="true"> | </span>
+          <span className="sr-only">&nbsp;at&nbsp;</span>
+          {time}
+        </>
+      )}
     </>
   );
 };
