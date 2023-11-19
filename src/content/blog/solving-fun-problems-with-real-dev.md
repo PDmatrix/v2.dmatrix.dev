@@ -9,7 +9,7 @@ tags:
 description: Solving fun problems with Real Dev, great project for programmers!
 ---
 
-**UPDATE**
+## UPDATE
 
 The [**Real Dev**](https://real.dev) site is down for some reason, so this post is not very actual. But at least you can see [my solutions here](https://github.com/PDmatrix/real-dev-projects) ;)
 
