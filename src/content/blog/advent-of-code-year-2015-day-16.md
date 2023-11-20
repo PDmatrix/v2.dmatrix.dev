@@ -178,5 +178,5 @@ public object Part2(IEnumerable<string> lines)
 
 Links:
 
-- [Puzzle](https://adventofcode.com/2015/day/15)
-- [Solution](https://github.com/PDmatrix/advent-of-code/tree/master/CSharp/Solutions/2015/15)
+- [Puzzle](https://adventofcode.com/2015/day/16)
+- [Solution](https://github.com/PDmatrix/advent-of-code/tree/master/CSharp/Solutions/2015/16)
