@@ -21,7 +21,7 @@ In this challenge, we need to help little Bobby Tables to assemble the circuit. 
 We need to find out, which signal is ultimately provided to _wire `a`_.
 Our solution is based on recursive function which can calculate value of a given wire. For example, imagine that we have such instructions:
 
-```plain
+```plaintext
 123 -> x
 456 -> y
 x AND y -> d
