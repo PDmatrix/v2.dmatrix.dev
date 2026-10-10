@@ -51,8 +51,8 @@
     "@shikijs/transformers": "^4.5.0",
     "@tailwindcss/typography": "^0.5.20",
     "@types/node": "^22.20.5",
-    "@typescript-eslint/parser": "^8.71.0",
-    "eslint": "^10.11.0",
+    "@typescript-eslint/parser": "^8.71.1",
+    "eslint": "^10.12.0",
     "eslint-plugin-astro": "^3.2.1",
     "globals": "^17.13.0",
     "husky": "^9.1.7",
@@ -63,8 +63,8 @@
     "prettier-plugin-astro": "^1.1.0",
     "prettier-plugin-tailwindcss": "^0.8.1",
     "typescript": "~6.0.3",
-    "typescript-eslint": "^8.71.0",
-    "vite": "^8.3.2"
+    "typescript-eslint": "^8.71.1",
+    "vite": "^8.3.3"
   },
   "resolutions": {
     "satori/fflate": "0.7.5"
