@@ -26,19 +26,19 @@
     "validate": "yarn format:check && yarn lint && yarn build && yarn test"
   },
   "dependencies": {
-    "@astrojs/markdown-remark": "^7.3.1",
+    "@astrojs/markdown-remark": "^7.3.2",
     "@astrojs/rss": "^4.0.19",
     "@astrojs/sitemap": "^3.7.4",
     "@fontsource/ibm-plex-mono": "^5.3.0",
     "@tailwindcss/vite": "^4.3.3",
-    "astro": "^7.3.5",
+    "astro": "^7.3.6",
     "dayjs": "^1.11.23",
     "github-slugger": "^2.0.0",
     "reading-time": "^1.5.0",
     "rehype-callouts": "^2.2.0",
     "remark-collapse": "^0.1.2",
     "remark-toc": "^9.0.0",
-    "satori": "^0.34.1",
+    "satori": "^0.35.1",
     "sharp": "^0.35.5",
     "tailwindcss": "^4.3.3"
   },
