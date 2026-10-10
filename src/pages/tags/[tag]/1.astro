@@ -1,0 +1,12 @@
+---
+import { getCollection } from "astro:content";
+import { getUniqueTags } from "@/utils/getUniqueTags";
+
+export async function getStaticPaths() {
+  return getUniqueTags(await getCollection("posts")).map(({ tag }) => ({
+    params: { tag },
+  }));
+}
+
+return Astro.redirect(`/tags/${Astro.params.tag}/`, 301);
+---
